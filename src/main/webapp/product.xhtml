@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+   <h:head>
+      <title>Data Table</title>		
+      <h:outputStylesheet library="css" name="styles.css"  /> 	
+   </h:head>
+   <h:body> 
+   <h2>Product DataTable</h2>
+   <h:form>
+      <h:dataTable value="#{productBean.products}" var="product">
+         <h:column>    				
+            <f:facet name="header">Name</f:facet>   
+            <h:inputText value="#{product.name}" rendered="#{product.edit}" /> 				
+            <h:outputText value="#{product.name}" rendered="#{not product.edit}"></h:outputText>
+         </h:column>
+         <h:column>    				
+            <f:facet name="header">ProductId</f:facet>   
+            <h:inputText value="#{product.productId}" rendered="#{product.edit}" /> 				
+            <h:outputText value="#{product.productId}" rendered="#{not product.edit}"></h:outputText>
+         </h:column>
+      	<h:column>
+            <f:facet name="header">Edit</f:facet>
+               <h:commandButton value="Edit" 
+                  action="#{productBean.editProduct(product)}" 
+                  rendered="#{not product.edit}">       
+               </h:commandButton>
+         </h:column>
+          <h:column>
+            <f:facet name="header">Delete</f:facet>
+               <h:commandButton value="Delete" 
+                  action="#{productBean.deleteProduct(product)}"  >                
+               </h:commandButton>
+          </h:column>
+      </h:dataTable>
+      <h:commandButton value="Save Product"
+          action="#{productBean.saveProducts}" />	
+   </h:form>
+   
+   </h:body>
+</html>
