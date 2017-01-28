@@ -5,13 +5,13 @@
 xmlns:h="http://java.sun.com/jsf/html"
 xmlns:f="http://java.sun.com/jsf/core">
    <h:head>
+   	  <h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
       <title>Data Table</title>		
-      <h:outputStylesheet library="css" name="styles.css"  /> 	
    </h:head>
    <h:body> 
    <h2>Product DataTable</h2>
    <h:form>
-      <h:dataTable value="#{productBean.products}" var="product">
+      <h:dataTable value="#{productBean.products}" var="product" class="table">
          <h:column>    				
             <f:facet name="header">Name</f:facet>   
             <h:inputText value="#{product.name}" rendered="#{product.edit}" /> 				
@@ -24,21 +24,21 @@ xmlns:f="http://java.sun.com/jsf/core">
          </h:column>
       	<h:column>
             <f:facet name="header">Edit</f:facet>
-               <h:commandButton value="Edit" 
+               <h:commandButton class="btn btn-primary" value="Edit" 
                   action="#{productBean.editProduct(product)}" 
                   rendered="#{not product.edit}">       
                </h:commandButton>
          </h:column>
           <h:column>
             <f:facet name="header">Delete</f:facet>
-               <h:commandButton value="Delete" 
+               <h:commandButton class="btn btn-primary" value="Delete" 
                   action="#{productBean.deleteProduct(product)}"  >                
                </h:commandButton>
           </h:column>
       </h:dataTable>
-      <h:commandButton value="Save Product"
+      <h:commandButton class="btn btn-primary" value="Save Product"
           action="#{productBean.saveProducts}" />
-     <h:commandLink value="AddProduct"
+     <h:commandLink class="btn btn-success" value="AddProduct"
      action="addProduct?faces-redirect=true" />	
    </h:form>
    

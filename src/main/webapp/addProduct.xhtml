@@ -5,14 +5,17 @@
 xmlns:h="http://java.sun.com/jsf/html"
 xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
+ <h:outputStylesheet library="css" name="bootstrap.css"></h:outputStylesheet>
+ <h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Insert title here</title>
 </h:head>
 <h:body>
-	<h:form>
-		<h:inputText  value="#{productBean.product.name}" />
-		<h:inputText  value="#{productBean.product.productId}" />
-		<h:commandButton value="add Product" action="#{productBean.addProduct()}"/>
+	<h1>Add Product</h1>
+	<h:form class="form form-group">
+		<h:inputText class="form-control" value="#{productBean.product.name}" />
+		<h:inputText  class="form-control" value="#{productBean.product.productId}" />
+		<h:commandButton class="btn btn-primary" value="add Product" action="#{productBean.addProduct()}"/>
 	</h:form>
 </h:body>
 </html>

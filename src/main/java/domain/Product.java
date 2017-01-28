@@ -2,11 +2,8 @@ package domain;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.RequestScoped;
-import javax.faces.bean.ManagedBean;
 
-@ManagedBean
-@RequestScoped
+
 public class Product implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
