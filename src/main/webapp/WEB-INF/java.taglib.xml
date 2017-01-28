@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd">
 	<namespace>http://jsflive.com/taglib</namespace>
 	<tag>
-		<tag-name>buttonPanel</tag-name>
-		<source>/WEB-INF/tag/buttonPanel.xhtml</source>
+		<tag-name>tableSet</tag-name>
+		<source>tag/buttonPanel.xhtml</source>
 	</tag>
 </facelet-taglib>

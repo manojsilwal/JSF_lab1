@@ -10,8 +10,8 @@ xmlns:f="http://java.sun.com/jsf/core">
 </h:head>
 <h:body>
 	<h:form>
-		<h:inputText  value="#{productBean.name}" />
-		<h:inputText  value="#{productBean.productId}" />
+		<h:inputText  value="#{productBean.product.name}" />
+		<h:inputText  value="#{productBean.product.productId}" />
 		<h:commandButton value="add Product" action="#{productBean.addProduct()}"/>
 	</h:form>
 </h:body>

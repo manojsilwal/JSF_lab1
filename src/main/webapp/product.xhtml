@@ -37,7 +37,9 @@ xmlns:f="http://java.sun.com/jsf/core">
           </h:column>
       </h:dataTable>
       <h:commandButton value="Save Product"
-          action="#{productBean.saveProducts}" />	
+          action="#{productBean.saveProducts}" />
+     <h:commandLink value="AddProduct"
+     action="addProduct?faces-redirect=true" />	
    </h:form>
    
    </h:body>

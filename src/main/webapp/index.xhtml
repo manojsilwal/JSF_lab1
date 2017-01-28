@@ -4,10 +4,11 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:jl="http://jsflive.com/taglib">
-	<f:metadata>
-		<f:viewParam name="locale" value="#{user.locale}"></f:viewParam>
-	</f:metadata>
+	
 	<h:head>
+		<f:metadata>
+			<f:viewParam name="locale" value="#{user.locale}"></f:viewParam>
+		</f:metadata>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		<title>#{msgs.pageTitle}</title>
 	</h:head>
@@ -16,6 +17,6 @@
 		<h:link outcome="index?locale=en" value="English" />
 		
 		<h1>#{msgs.heading}</h1>
-		<jl:buttonPanel />
+		<jl:tableSet />
 	</h:body>
 </html>
